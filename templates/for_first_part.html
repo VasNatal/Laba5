@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    {{ my_variable }}
+    {{ dict.inner }}
+        {% for element in list %}
+            {% if element == '1' %}
+                <li>{{ element }} - Единица</li>
+            {% elif element == '2' %}
+                <li>{{ element }} - Двойка</li>
+            {% endif %}
+        {% endfor %}
+{% endblock %}
